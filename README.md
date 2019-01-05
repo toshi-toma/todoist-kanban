@@ -2,6 +2,7 @@
 A Trello-like Todoist application.
 
 # Todo
+- [x] preparing the development environment.
 - [ ] research Todoist api.
 - [ ] show all projects as each board title.
 - [ ] show each tasks to board.
