@@ -1,7 +1,7 @@
 # todoist-kanban
 A Trello-like Todoist application.
 
-# Todo
+# ToDo
 - [x] preparing the development environment.
 - [ ] research Todoist api.
 - [ ] show all projects as each board title.
