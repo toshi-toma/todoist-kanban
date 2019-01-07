@@ -15,3 +15,43 @@ Sync APIはREST APIに比べて豊富な機能が揃っているが、REST API�
 - APIトークン(シンプル)
 - OAuth | Todoist App
   - [Todoist App Management](https://developer.todoist.com/appconsole.html)で作成可能
+
+## REST API
+
+[API Documantaion](https://doist.github.io/todoist-api/rest/v8/)
+
+### 認証について
+  - Authorization headerに`Bearer $token`を付与する
+  - `Bearer $token`はTodoist personal API tokenまたはOAuth API token
+  
+### プロジェクト
+[プロジェクト | API Documantaion](https://doist.github.io/todoist-api/rest/v8/#projects)
+
+- 全プロジェクト取得
+
+URI: https://beta.todoist.com/API/v8/projects
+
+```js
+fetch('https://beta.todoist.com/API/v8/projects',
+ {
+   headers: {
+     Authorization: `Bearer ${API_TOKEN}`
+    }
+  })
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  });
+
+[
+    {
+        "id": 1234,
+        "name": "Inbox",
+        "comment_count": 10,
+        "order": 1,
+        "indent": 1
+    }
+]
+```
