@@ -55,3 +55,39 @@ fetch('https://beta.todoist.com/API/v8/projects',
     }
 ]
 ```
+
+### タスク
+[タスク | API Documantaion](https://doist.github.io/todoist-api/rest/v8/#get-active-tasks)
+
+- 全タスク取得
+
+URI: https://beta.todoist.com/API/v8/tasks
+
+```js
+fetch('https://beta.todoist.com/API/v8/tasks',
+ {
+   headers: {
+     Authorization: `Bearer ${API_TOKEN}`
+    }
+  })
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  });
+
+[
+    {
+        "id": 123,
+        "project_id": 234,
+        "content": "Inbox",
+        "comment_count": 10,
+        "order": 1,
+        "indent": 1,
+        "priority": 1,
+        "url": "https://todoist.com/showTask?id=123"
+    },
+    ...
+]
+```
