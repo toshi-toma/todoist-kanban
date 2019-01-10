@@ -30,6 +30,7 @@ Sync APIはREST APIに比べて豊富な機能が揃っているが、REST API�
 - 全プロジェクト取得
 
 URI: https://beta.todoist.com/API/v8/projects
+METHOD: GET
 
 ```js
 fetch('https://beta.todoist.com/API/v8/projects',
@@ -57,11 +58,13 @@ fetch('https://beta.todoist.com/API/v8/projects',
 ```
 
 ### タスク
-[タスク | API Documantaion](https://doist.github.io/todoist-api/rest/v8/#get-active-tasks)
 
-- 全タスク取得
+#### 全タスク取得
+
+[API Documantaion](https://doist.github.io/todoist-api/rest/v8/#get-active-tasks)
 
 URI: https://beta.todoist.com/API/v8/tasks
+METHOD: GET
 
 ```js
 fetch('https://beta.todoist.com/API/v8/tasks',
@@ -90,4 +93,28 @@ fetch('https://beta.todoist.com/API/v8/tasks',
     },
     ...
 ]
+```
+
+#### タスク情報の更新
+
+[API Documantaion](https://doist.github.io/todoist-api/rest/v8/#get-active-tasks)
+
+URI: https://beta.todoist.com/API/v8/tasks/{Id}
+METHOD: POST
+
+```js
+
+var data = {content: "any tasks"};
+
+fetch('https://beta.todoist.com/API/v8/tasks/2992089009',
+ {
+    method: "POST",
+    headers: {
+     'Authorization': `Bearer ${API_TOKEN}`,
+     "X-Request-Id": '57635133-1208-4684-9a85-5a358bb8c016',
+     "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+
 ```
