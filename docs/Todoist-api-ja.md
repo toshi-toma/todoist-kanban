@@ -29,7 +29,7 @@ Sync APIはREST APIに比べて豊富な機能が揃っているが、REST API�
 
 - 全プロジェクト取得
 
-URI: https://beta.todoist.com/API/v8/projects
+URI: https://beta.todoist.com/API/v8/projects  
 METHOD: GET
 
 ```js
@@ -63,7 +63,7 @@ fetch('https://beta.todoist.com/API/v8/projects',
 
 [API Documantaion](https://doist.github.io/todoist-api/rest/v8/#get-active-tasks)
 
-URI: https://beta.todoist.com/API/v8/tasks
+URI: https://beta.todoist.com/API/v8/tasks  
 METHOD: GET
 
 ```js
@@ -99,7 +99,7 @@ fetch('https://beta.todoist.com/API/v8/tasks',
 
 [API Documantaion](https://doist.github.io/todoist-api/rest/v8/#get-active-tasks)
 
-URI: https://beta.todoist.com/API/v8/tasks/{Id}
+URI: https://beta.todoist.com/API/v8/tasks/{Id}  
 METHOD: POST
 
 ```js
