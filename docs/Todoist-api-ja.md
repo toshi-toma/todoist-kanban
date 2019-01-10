@@ -27,7 +27,7 @@ Sync APIはREST APIに比べて豊富な機能が揃っているが、REST API�
 ### プロジェクト
 [プロジェクト | API Documantaion](https://doist.github.io/todoist-api/rest/v8/#projects)
 
-- 全プロジェクト取得
+#### 全プロジェクト取得
 
 URI: https://beta.todoist.com/API/v8/projects  
 METHOD: GET
