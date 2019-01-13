@@ -97,7 +97,7 @@ fetch('https://beta.todoist.com/API/v8/tasks',
 
 #### タスク情報の更新
 
-[API Documantaion](https://doist.github.io/todoist-api/rest/v8/#get-active-tasks)
+[API Documantaion](https://doist.github.io/todoist-api/rest/v8/#update-a-task)
 
 URI: https://beta.todoist.com/API/v8/tasks/{Id}  
 METHOD: POST
@@ -116,5 +116,33 @@ fetch('https://beta.todoist.com/API/v8/tasks/2992089009',
     },
     body: JSON.stringify(data)
   })
+
+```
+
+#### タスクの追加
+
+[API Documantaion](https://doist.github.io/todoist-api/rest/v8/#create-a-new-task)
+
+URI: https://beta.todoist.com/API/v8/tasks 
+METHOD: POST
+
+```js
+var data = {"content": "Appointment with Maria", "due_string": "tomorrow at 12:00", "due_lang": "en", "priority": 4};
+
+fetch('https://beta.todoist.com/API/v8/tasks',
+ {
+    method: "POST",
+    headers: {
+     'Authorization': `Bearer ${API_TOKEN}`,
+     "X-Request-Id": '4020ee6c-0449-3b77-72e9-87b9a80a457a',
+     "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  }).then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson);
+  });
 
 ```
